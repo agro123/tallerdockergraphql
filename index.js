@@ -6,10 +6,9 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    helloSebastian(message: String!): String
+    helloAlejo(message: String!): String
   },
-    type Query {
-    helloSebastianmessage(message: String!): String
-  }
 `;
 
 // Define los resolvers de GraphQL
@@ -18,8 +17,11 @@ const resolvers = {
     hello: (_, { message }) => {
       return `¡Hola, ${message}! Un saludo por parte del profe `;
     },
+    helloAlejo: (_, { message }) => {
+      return `¡Hola, ${message}! Un saludo por parte de Alejandro `;
+    },
     helloSebastian: (_, { message }) => {
-      return `¡Hola, ${message}! Un saludo por parte de Sebastian Rey!!!! `;
+      return `¡Hola, ${message}! Un saludo por parte de Sebastian Rey! Tu Rey `;
     },
   },
 };
